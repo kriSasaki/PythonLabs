@@ -5,9 +5,8 @@ def list_of_file_in_directory(path_directory):
         list_files = os.listdir(path_directory)
         return list_files
     except FileNotFoundError:
-        return []  # ¬озвращаем пустой список, если директори€ не существует
+        return []
 
-# ѕример использовани€:
 directory = "C:\Games"
 files = list_of_file_in_directory(directory)
 if files:
