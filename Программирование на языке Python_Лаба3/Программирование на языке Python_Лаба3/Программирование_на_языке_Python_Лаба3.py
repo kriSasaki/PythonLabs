@@ -5,7 +5,6 @@ def generate_elements_in_range(input_list, a, b):
     for i in range(a, b + 1):
         yield input_list[i]
 
-# Пример использования:
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 a = 2
 b = 7
