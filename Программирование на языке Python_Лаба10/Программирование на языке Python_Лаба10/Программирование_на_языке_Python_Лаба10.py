@@ -9,12 +9,10 @@ def get_tiobe_data():
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Find the table with the desired class
         table = soup.find('table', class_='table table-striped table-top20')
 
         if table:
             data = []
-            # Extract data from table rows
             for row in table.find_all('tr')[1:]:
                 columns = row.find_all('td')
                 rank = columns[0].get_text(strip=True)
